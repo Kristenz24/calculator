@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    font-family                 : sans-serif;
+    display                     : flex;
+    justify-content             : center;
+    align-items                 : center;
+    background-color            : #a5bac6;
+    padding: 1rem;
+
+}
+
+/* MAIN CONTAINER */
+.calculator-container{
+    display                     : flex;
+    flex-direction              : column;
+    gap                         : 1rem;
+    padding                     : 1rem;
+    width                       : 400px;
+    height                      : 550px;
+
+    border-radius               : .5rem;
+    color                       : var(--clr-text);
+    background-color            : var(--clr-calcu-bg);
+    border-bottom               : 15px solid var(--clr-calcu-bg-shadow);
+    border-right                : 3px solid var(--clr-calcu-bg-shadow);
+    border-left                 : 3px solid var(--clr-calcu-bg-shadow);
+}
+
+.calculator-header{
+    font-family                 : "Poppins", sans-serif;
+    color                       : #aaa;
+    font-weight                 : 400; 
+}
+
+.display-container{                                                        
+    text-align                  : right;
+    padding                     : .5rem 1rem;
+    background-color            : var(--clr-display);
+    color                       : var(--clr-display-text);
+    border-radius               : .5rem;
+    border-top                  : 5px solid var(--clr-display-highlight);
+    border-bottom               : 5px solid var(--clr-display-shadow);
+    overflow                    : hidden;
+    font-size                   : .9rem;
+}
+.display-container > p{
+    height                      : 10px;
+}
+.display-container > h2{
+    padding-right               : 1rem; 
+}
+
+.button-container{
+    display                     : flex;
+    flex-direction              : column;
+    gap                         : .5rem;
+}
+.calculator-keys{
+    display                     : grid;
+    grid-template-columns       : repeat(4, 1fr);
+    gap                         : .5rem;
+    padding                     : .5rem;
+    border-radius               : .5rem;
+    background-color            : var(--clr-text);
+}
+
+/* EACH KEYS */
+.calculator-keys > * {
+    height                      : 60px;;
+    border                      : none;
+    background-color            : var(--clr-button);
+    color                       : var(--clr-text);
+    border-radius               : .5rem;
+    font-size                   : 1.2rem;
+    border-bottom               : 5px solid var(--clr-button-shadow);
+    cursor                      : pointer;
+}
+.calculator-keys > *:active{
+    border                      :  none;
+    transform                   : translateY(5px);
+}
+.calculator-keys > *:hover{
+    background-color            : var(--clr-button-hover);
+}
+.calculator-keys > *:nth-child(13){
+    background-color            : var(--clr-clear);
+    border-bottom               : 5px solid var(--clr-clear-shadow);
+}
+.calculator-keys > *:nth-child(13):hover{
+    background-color            : var(--clr-clear-hover);
+}
+
+/* SURNAME BUTTON */
+.surname{
+    display                     : grid;
+}
+.surname > * {
+    height                      : 60px;
+    background-color            : var(--clr-text);
+    border                      : none;
+    color                       : #aaa;
+    border-bottom               : 5px solid var(--clr-text-shadow);
+    border-radius               : .5rem;
+    cursor                      : pointer;
+}
+.surname > *:active{
+    border                      : none;
+    transform                   : translateY(5px);
+}
+
+span{
+    background-color            : greenyellow;
+    border                      : 1px solid greenyellow;
+    color                       : greenyellow;
+    margin-left                 : 100px;
+    border-radius               : 100px;
+    border-top                  : 5px solid rgb(234, 236, 234);
+}

@@ -1,0 +1,23 @@
+/* GLOBAL VARIABLES */
+:root{
+    --clr-button-hover          :#f9f2e2;
+    --clr-button                :#ffe6a7;
+    --clr-button-shadow         :#b3a175;
+
+    --clr-text                  :#432818;
+    --clr-text-shadow           :#392216;
+
+    --clr-bg                    :#222;
+    --clr-calcu-bg              :#6D5959;
+    --clr-calcu-bg-shadow       :#4c3e3e;
+
+    --clr-display               :#A2D4D8;
+    --clr-display-text          :#618a8c;
+    --clr-display-highlight     :#c8e9eb;
+    --clr-display-shadow        :#81a6a8;
+
+    --clr-clear                 :#ffa7a7;
+    --clr-clear-shadow          :#b37575;
+    --clr-clear-hover           :#efc5c5;
+}
+
