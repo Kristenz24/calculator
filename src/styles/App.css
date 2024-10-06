@@ -6,8 +6,8 @@ body{
     justify-content             : center;
     align-items                 : center;
     background-color            : #a5bac6;
-    padding: 1rem;
-
+    padding                     : 1rem;
+    user-select                 : none;
 }
 
 /* MAIN CONTAINER */
