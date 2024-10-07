@@ -33,6 +33,7 @@ body{
     font-weight                 : 400; 
 }
 
+/* DISPLAY CONTAINER */
 .display-container{                                                        
     text-align                  : right;
     padding                     : .5rem 1rem;
@@ -44,18 +45,22 @@ body{
     overflow                    : hidden;
     font-size                   : .9rem;
 }
+
 .display-container > p{
     height                      : 10px;
 }
+
 .display-container > h2{
     padding-right               : 1rem; 
 }
 
+/* BUTTONS */
 .button-container{
     display                     : flex;
     flex-direction              : column;
     gap                         : .5rem;
 }
+
 .calculator-keys{
     display                     : grid;
     grid-template-columns       : repeat(4, 1fr);
@@ -65,7 +70,7 @@ body{
     background-color            : var(--clr-text);
 }
 
-/* EACH KEYS */
+/* EACH BUTTON KEYS */
 .calculator-keys > * {
     height                      : 60px;;
     border                      : none;
@@ -76,17 +81,21 @@ body{
     border-bottom               : 5px solid var(--clr-button-shadow);
     cursor                      : pointer;
 }
+
 .calculator-keys > *:active{
     border                      :  none;
     transform                   : translateY(5px);
 }
+
 .calculator-keys > *:hover{
     background-color            : var(--clr-button-hover);
 }
+
 .calculator-keys > *:nth-child(13){
     background-color            : var(--clr-clear);
     border-bottom               : 5px solid var(--clr-clear-shadow);
 }
+
 .calculator-keys > *:nth-child(13):hover{
     background-color            : var(--clr-clear-hover);
 }
@@ -95,6 +104,7 @@ body{
 .surname{
     display                     : grid;
 }
+
 .surname > * {
     height                      : 60px;
     background-color            : var(--clr-text);
@@ -104,6 +114,7 @@ body{
     border-radius               : .5rem;
     cursor                      : pointer;
 }
+
 .surname > *:active{
     border                      : none;
     transform                   : translateY(5px);

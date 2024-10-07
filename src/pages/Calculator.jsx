@@ -14,6 +14,7 @@ export default function Calculator() {
     const digitClickHandler = (e) => {
         const value = e.target.innerHTML;
 
+        // ONLY RUNS IF THERE IS AN OPERATOR 
         if (operator === null){
             if(digit1 === null){
                 if(value !== '0'){
@@ -22,19 +23,20 @@ export default function Calculator() {
                 }
             } else { 
                 if(value !== '0' || digit1 !== '0'){
-                    setDigit1(digit1 + value);
-                    setDisplay(digit1 + value);
+                    // TO PREVENT ADDING ERROR TO THE CALCULATION
+                    if (digit1 !== "Can't Divide by Zero" && digit1.length < 15){
+                        setDigit1(digit1 + value);
+                        setDisplay(digit1 + value);
+                    }
                 }
             } 
         } else {
             if(digit2 === null) {
-                if(value !== '0'){
                     setDigit2(value);
                     setDisplay(value);
-                }
             } else {
                 if(value !== '0' || digit2 !== '0'){
-                    if(digit2.length < 10) {
+                    if(digit2.length < 15) {
                         setDigit2(digit2 + value);
                         setDisplay(digit2 + value);
                     }
@@ -45,7 +47,7 @@ export default function Calculator() {
     
     const operatorClickHandler = (e) => {
         calculateClickHandler();
-        if (digit1 !== null){
+        if (digit1 !== null && digit1 !== "Can't Divide by Zero"){
             const value = e.target.innerHTML;
             setOperator(value);
             setDisplay(0);
@@ -75,7 +77,7 @@ export default function Calculator() {
                     result = digitOne * digitTwo;
                     break;
                 case "/":
-                    result = digitTwo !== 0 ? digitOne / digitTwo : "Can't divide by 0";  
+                    result = digitTwo !== 0 ? digitOne / digitTwo : "Can't Divide by Zero";  
                     break;
                 default:
                     result = "ERROR";
